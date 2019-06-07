@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const UsersSchema = new Schema({
   _id: Number,
@@ -15,13 +15,11 @@ const UsersSchema = new Schema({
   phone: String,
   address: String
 },
-  { collection: 'users' }
-);
+{ collection: 'users' }
+)
 
-const Users = mongoose.model("Users", UsersSchema);
+const Users = mongoose.model('Users', UsersSchema)
 module.exports = {
   Users: Users
   // other model
 }
-
-//module.exports = mongoose.model("Users", UsersSchema);

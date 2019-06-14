@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const models = require('./schemas')
 const helpers = require('./helpers')
 
-
 const getUsers = async (req, res, next) => {
   const mongoDbURI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 

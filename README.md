@@ -144,3 +144,26 @@ Result:
   ...
 ]
 ```
+
+
+### Latency or /latency
+Returns: `string`
+```
+Thanks for waiting 1 second
+```
+
+#### Query string parameters
+
+**Changing delay**
+
+Increase latency (delay) to `n` milliseconds where, *min:1000* and *max:4000*. Default value: 1000ms.
+Returns `n` record(s) where `n` is the value (type: Number) of the `limit` key.
+
+Example: `latency?delay=2000`
+
+Result
+```
+Thanks for waiting 2 seconds
+```
+
+Wrong type for `n` value will produce a default delay of 1000ms.

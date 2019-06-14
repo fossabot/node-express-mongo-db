@@ -1,14 +1,8 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 const models = require('./schemas')
+const helpers = require('./helpers')
 
-const toNumberHelper = (queryInput) => {
-  const toNumber = parseInt(queryInput, 10)
-  if (typeof toNumber === 'number' && !isNaN(toNumber)) {
-    return toNumber
-  }
-  return ''
-}
 
 const getUsers = async (req, res, next) => {
   const mongoDbURI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
@@ -21,8 +15,8 @@ const getUsers = async (req, res, next) => {
 
   try {
     const monRes = await models.Users.find()
-      .limit(toNumberHelper(req.query.limit))
-      .skip(toNumberHelper(req.query.offset))
+      .limit(helpers.toNumber(req.query.limit))
+      .skip(helpers.toNumber(req.query.offset))
 
     res.status(200).json(monRes)
   } catch (err) {

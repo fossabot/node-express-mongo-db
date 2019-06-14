@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const db = require('./queries')
+const latency = require('./latency')
 
 const app = express()
 
@@ -25,6 +26,8 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/users', db.getUsers)
+
+app.get('/latency', latency.simulate)
 
 app.get('*', (req, res, next) => {
   res.status(404).json({

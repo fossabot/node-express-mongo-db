@@ -23,7 +23,7 @@ const simulate = async (req, res, next) => {
   const noun = delaySecs > 1 ? 'seconds' : 'second'
   try {
     const response = await sleep(delay, `Thanks for waiting ${delaySecs} ${noun}`)
-    res.status(200).send(response)
+    res.status(200).json({ response })
   } catch (err) {
     res.status(404).json({
       message: '404, Nothing here!',

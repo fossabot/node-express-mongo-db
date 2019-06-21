@@ -147,9 +147,11 @@ Result:
 
 
 ### Latency or /latency
-Returns: `string`
+Returns: `object`
 ```
-Thanks for waiting 1 second
+{
+    "response": "Thanks for waiting 4 seconds"
+}
 ```
 
 #### Query string parameters

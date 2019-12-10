@@ -2,7 +2,15 @@
   "name": "node-express-mongo-db",
   "version": "1.0.0",
   "description": "Simple example of how to integrate mongodb with nodejs",
-  "keywords": ["node mongo", "nodejs mongodb", "mongodb", "rest node mongo", "mongoose mongo", "api mongo node", "express mongodb"],
+  "keywords": [
+    "node mongo",
+    "nodejs mongodb",
+    "mongodb",
+    "rest node mongo",
+    "mongoose mongo",
+    "api mongo node",
+    "express mongodb"
+  ],
   "author": "Al Diaz",
   "license": "MIT",
   "main": "index.js",

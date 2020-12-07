@@ -4,9 +4,9 @@ const models = require('./schemas')
 const helpers = require('./helpers')
 
 const getUsers = async (req, res, next) => {
-  const mongoDbURI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
+  const mongoDbURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
 
-  mongoose.connect(mongoDbURI, { useNewUrlParser: true })
+  mongoose.connect(mongoDbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
   let db = mongoose.connection
   db.once('open', () => console.log('connected to the database'))

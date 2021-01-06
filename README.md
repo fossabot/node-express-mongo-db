@@ -10,18 +10,18 @@
 
 ## Installation
 ```
-yarn install
+npm install
 ```
 ## Running the server
 
 ### Development
 ```
-yarn run dev
+npm run dev
 ```
 
 ### Production
 ```
-yarn start
+npm start
 ```
 
 ## API endpoints or routes 

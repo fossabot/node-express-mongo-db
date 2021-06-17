@@ -1,4 +1,4 @@
-const helpers = require('./helpers')
+import { toNumber } from './helpers'
 
 const sleep = (delay, message) => {
   return new Promise((resolve) => {
@@ -17,21 +17,14 @@ const validTimeRange = (delay) => {
   return defaultOutOfRange
 }
 
-const simulate = async (req, res, next) => {
-  const delay = validTimeRange(helpers.toNumber(req.query.delay))
+export const simulate = async (req, res) => {
+  const delay = validTimeRange(toNumber(req.query.delay))
   const delaySecs = Math.floor(delay / 1000)
   const noun = delaySecs > 1 ? 'seconds' : 'second'
   try {
     const response = await sleep(delay, `Thanks for waiting ${delaySecs} ${noun}`)
-    res.status(200).json({ response })
+    res.status(200).json({ data: response })
   } catch (err) {
-    res.status(404).json({
-      message: '404, Nothing here!',
-      error: true
-    })
+    res.status(400).end()
   }
-}
-
-module.exports = {
-  simulate
 }

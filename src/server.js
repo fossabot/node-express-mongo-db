@@ -6,7 +6,7 @@ import userRouter from './resources/users/router'
 import { connect } from './utils/db'
 import { simulate } from './utils/latency'
 
-const PORT = 3333
+const PORT = process.env.PORT || 3333
 
 const app = express()
 

@@ -38,7 +38,7 @@ npm start
 
 ### GET /api/users
 
-- Returns an object with the key data containing an array of objects with 1,000 records.
+- Returns an object with the key data containing an array of objects with `40 records`.
 - Supports query string:
   - ?limit=integer
   - ?offset=integer
@@ -49,41 +49,35 @@ npm start
 curl http://127.0.0.1:3333/api/users
 ```
 
-#### Response:
+#### Sample response:
 
 ```json
 {
   "data": [
     {
-      "_id": 16,
-      "index": 16,
-      "guid": "2de0ede3-423d-4c12-835d-0f7460bc3e8f",
-      "isActive": true,
-      "age": 24,
-      "name": "Hardy",
-      "lastname": "Zimmerman",
-      "gender": "male",
-      "company": "SYNTAC",
-      "email": "hardyzimmerman@syntac.com",
-      "phone": "+1 (965) 514-3726",
-      "address": "465 Schenck Place, Vallonia, Georgia, 2580"
+      "_id": "60da6b74fc13ae7069000d4b",
+      "firstname": "Dedra",
+      "lastname": "Demangel",
+      "age": 96,
+      "gender": "Agender",
+      "username": "ddemangel3",
+      "company": "Skidoo",
+      "email": "ddemangel3@networkadvertising.org",
+      "phone": "759-142-2883",
+      "address": "4 Fisk Drive"
     },
     {
-      "_id": 0,
-      "index": 0,
-      "guid": "3f049239-fc26-4ec0-9a15-c36bc9f78e21",
-      "isActive": true,
-      "age": 38,
-      "name": "Frances",
-      "lastname": "Tyler",
-      "gender": "female",
-      "company": "FROLIX",
-      "email": "francestyler@frolix.com",
-      "phone": "+1 (957) 595-3029",
-      "address": "261 Jefferson Avenue, Terlingua, Kentucky, 8445"
-    },
-    ...
-    ...
+      "_id": "60da6b74fc13ae7069000d48",
+      "firstname": "Martynne",
+      "lastname": "Pimmocke",
+      "age": 79,
+      "gender": "Female",
+      "username": "mpimmocke0",
+      "company": "Edgeify",
+      "email": "mpimmocke0@amazonaws.com",
+      "phone": "354-508-5487",
+      "address": "20633 Stone Corner Trail"
+    }
   ]
 }
 ```
@@ -106,18 +100,16 @@ curl http://127.0.0.1:3333/api/users?limit=1
 {
   "data": [
     {
-      "_id": 16,
-      "index": 16,
-      "guid": "2de0ede3-423d-4c12-835d-0f7460bc3e8f",
-      "isActive": true,
-      "age": 24,
-      "name": "Hardy",
-      "lastname": "Zimmerman",
-      "gender": "male",
-      "company": "SYNTAC",
-      "email": "hardyzimmerman@syntac.com",
-      "phone": "+1 (965) 514-3726",
-      "address": "465 Schenck Place, Vallonia, Georgia, 2580"
+      "_id": "60da6b74fc13ae7069000d4b",
+      "firstname": "Dedra",
+      "lastname": "Demangel",
+      "age": 96,
+      "gender": "Agender",
+      "username": "ddemangel3",
+      "company": "Skidoo",
+      "email": "ddemangel3@networkadvertising.org",
+      "phone": "759-142-2883",
+      "address": "4 Fisk Drive"
     }
   ]
 }
@@ -126,7 +118,7 @@ curl http://127.0.0.1:3333/api/users?limit=1
 Wrong type for `n` value will return _all the users_.
 Example: `users?limit=%27Hello%27`
 
-##### GET /api/users?limit=1
+##### GET /api/users?offset=10
 
 - Returns from `n` (PRIMARY KEY) where `n` is the value (type: Number) of the `offset` key.
 
@@ -142,35 +134,29 @@ curl http://127.0.0.1:3333/api/users?offset=10
 {
   "data": [
     {
-      "_id": 3,
-      "index": 3,
-      "guid": "f744bfbf-1e73-4a02-ac1e-cc028adad367",
-      "isActive": false,
-      "age": 34,
-      "name": "Downs",
-      "lastname": "Conley",
-      "gender": "male",
-      "company": "PROGENEX",
-      "email": "downsconley@progenex.com",
-      "phone": "+1 (859) 522-3715",
-      "address": "962 Alton Place, Cazadero, North Carolina, 7607"
+      "_id": "60da6b74fc13ae7069000d55",
+      "firstname": "Cindi",
+      "lastname": "Harnell",
+      "age": 57,
+      "gender": "Bigender",
+      "username": "charnelld",
+      "company": "Skyble",
+      "email": "charnelld@networkadvertising.org",
+      "phone": "176-961-8815",
+      "address": "09953 Susan Alley"
     },
     {
-      "_id": 7,
-      "index": 7,
-      "guid": "f8d45f43-356a-4a2b-91cd-8988a8bd461d",
-      "isActive": true,
-      "age": 28,
-      "name": "Paula",
-      "lastname": "Day",
-      "gender": "female",
-      "company": "MARKETOID",
-      "email": "pauladay@marketoid.com",
-      "phone": "+1 (824) 477-2206",
-      "address": "505 Boynton Place, Haring, Nebraska, 540"
-    },
-    ...
-    ...
+      "_id": "60da6b74fc13ae7069000d57",
+      "firstname": "Olva",
+      "lastname": "Hoodless",
+      "age": 61,
+      "gender": "Female",
+      "username": "ohoodlessf",
+      "company": "Jaloo",
+      "email": "ohoodlessf@illinois.edu",
+      "phone": "886-598-0586",
+      "address": "8 Chinook Pass"
+    }
   ]
 }
 ```
@@ -218,8 +204,7 @@ curl http://127.0.0.1:3333/latency?delay=2000
 }
 ```
 
-
-### GET everything else 
+### GET everything else
 
 - Any other endpoint will retrieve an object
 
@@ -228,6 +213,7 @@ curl http://127.0.0.1:3333/latency?delay=2000
 ```
 curl http://127.0.0.1:3333/
 ```
+
 #### Response:
 
 ```json
@@ -239,5 +225,5 @@ curl http://127.0.0.1:3333/
 ---
 
 ## Notes:
-If you need help at the tie of [Migrating from mLab to MongoDB Atlas](./migrating-mlab-to-mongo-atlas.md)
 
+If you need help at the tie of [Migrating from mLab to MongoDB Atlas](./migrating-mlab-to-mongo-atlas.md)

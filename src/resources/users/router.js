@@ -4,7 +4,7 @@ import { getUsers } from './controllers'
 
 const router = Router()
 
-// equals to /api/user
+// equals to /api/users
 router.get('/', getUsers)
 
 export default router

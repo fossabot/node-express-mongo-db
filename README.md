@@ -11,6 +11,8 @@ This is an easy, basic and raw example of **HOW to** implement an API with Node,
 
 - Node 12+
 - NPM
+- MongoDB
+- Optional: MongoDB account
 
 ## Install dependencies
 

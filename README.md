@@ -5,16 +5,30 @@
 
 ## Overview
 
-This is an easy, basic and raw example of **HOW to** implement an API with Node, Express and MongoDB (Atlas).
+This is an easy, basic and raw example of **HOW to** implement an API with Node, Express and MongoDB/Atlas (with Mongoose ODM).
 
 ## Requirements
 
 - Node 12+
 - NPM
 - MongoDB
+- Mongoose ODM
 - Optional: MongoDB account
 
 ## Install dependencies
+
+<!-- 
+https://github.com/typicode/husky/issues/866
+To avoid issues with `husky`, first enable `git hooks` (and add our hook):
+
+```shell
+npx husky install
+
+npx husky add .husky/pre-commit
+```
+
+Then, install the dependencies as usual: 
+-->
 
 ```
 npm install

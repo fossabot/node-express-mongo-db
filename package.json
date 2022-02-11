@@ -19,12 +19,13 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "start": "NODE_ENV=production ENVIRONMENT=prod node dist/index.js",
-    "dev": "ENVIRONMENT=dev nodemon --exec npm run dev-build",
-    "dev-build": "rimraf dist && npm run build && npm start",
+    "dev": "ENVIRONMENT=dev nodemon --exec babel-node -- src/index.js",
+    "dev-build": "rimraf dist && npm run build",
     "prepare": "husky install"
   },
   "dependencies": {
     "@babel/cli": "^7.15.7",
+    "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.6",
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",

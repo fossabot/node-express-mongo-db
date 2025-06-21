@@ -2,6 +2,7 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falpersonalwebsite%2Fnode-express-mongo-db.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falpersonalwebsite%2Fnode-express-mongo-db?ref=badge_shield)
 
 ## Overview
 
@@ -243,3 +244,6 @@ curl http://127.0.0.1:3333/
 ## Notes:
 
 If you need help at the tie of [Migrating from mLab to MongoDB Atlas](./migrating-mlab-to-mongo-atlas.md)
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falpersonalwebsite%2Fnode-express-mongo-db.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Falpersonalwebsite%2Fnode-express-mongo-db?ref=badge_large)
